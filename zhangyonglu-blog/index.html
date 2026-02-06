@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>张永禄的博客</title>
+  <meta name="description" content="张永禄的博客" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <video class="bg-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?q=80&w=2560&auto=format&fit=crop">
+    <source src="assets/space.mp4" type="video/mp4">
+    <source src="assets/Space.Mp4.mp4" type="video/mp4">
+    <source src="assets/space.mov" type="video/quicktime">
+  </video>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="logo">张永禄的博客</div>
+      <div class="nav-links">
+        <a href="#about">关于</a>
+        <a href="posts/index.html">文章</a>
+        <a href="#topics">主题</a>
+        <a href="#contact">联系</a>
+      </div>
+      <div class="theme-controls">
+        <label class="theme-label" for="theme-select">风格</label>
+        <select class="theme-select" id="theme-select">
+          <option value="arcane">魔幻</option>
+          <option value="romantic">浪漫</option>
+          <option value="minimal">极简</option>
+        </select>
+        <label class="theme-label theme-minimal-label is-hidden" for="minimal-select">黑白</label>
+        <select class="theme-select is-hidden" id="minimal-select">
+          <option value="light">白</option>
+          <option value="dark">黑</option>
+        </select>
+      </div>
+      <button class="nav-toggle" aria-label="切换导航">☰</button>
+    </nav>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Arcane Logbook</p>
+        <h1>张永禄的博客</h1>
+        <p class="lead">CHATGPT就是白痴，别信AI</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="posts/index.html">阅读最新文章</a>
+          <a class="btn ghost" href="#about">了解我</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="stat">
+          <span class="stat-number">随笔</span>
+          <span class="stat-label">主题系列</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">1</span>
+          <span class="stat-label">篇文章</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">2026</span>
+          <span class="stat-label">持续更新</span>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <div class="section-title">
+        <h2>关于我</h2>
+        <p>最好别来了解</p>
+      </div>
+      <div class="about-grid">
+        <div class="card">
+          <h3>关注领域</h3>
+          <p>我自己</p>
+        </div>
+        <div class="card">
+          <h3>写作风格</h3>
+          <p>。。。。。？</p>
+        </div>
+        <div class="card">
+          <h3>持续进化</h3>
+          <p>这里的每篇文章都是一个阶段性的疯狂，也是下一阶段的疯狂的起点。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="posts" class="section alt">
+      <div class="section-title">
+        <h2>最新文章</h2>
+        <p>精选更新，持续整理。</p>
+      </div>
+      <div class="posts-grid">
+        <article class="post-card">
+          <span class="tag">一点想法</span>
+          <h3><a href="posts/一点想法.html">一些奇妙的想法</a></h3>
+          <p>好久没写东西了，熬夜写的，这篇还是太保守了，下次写的激进一些。</p>
+          <div class="meta">5 min · 2026-02-03</div>
+      </div>
+    </section>
+
+    <section id="topics" class="section">
+      <div class="section-title">
+        <h2>主题领域</h2>
+        <p>内容聚焦，方便你快速找到感兴趣的方向。</p>
+      </div>
+      <div class="topics">
+        <div class="topic">随笔</div> 
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="section-title">
+        <h2>联系与订阅</h2>
+        <p>欢迎交流想法，一起进步。</p>
+      </div>
+      <div class="contact-card">
+        <div>
+          <h3>联系与订阅</h3>
+          <p>现在支持一键邮件联系、RSS、文章列表等快捷入口。</p>
+          <div class="contact-links">
+            <button class="chip chip-button" id="email-copy" type="button">邮箱：点击复制</button>
+            <a class="chip" href="posts/index.html">文章列表</a>
+            <a class="chip" href="#topics">主题导航</a>
+            <a class="chip" href="#about">关于我</a>
+          </div>
+        </div>
+        <form class="subscribe" id="subscribe-form">
+          <input type="email" name="email" placeholder="你的邮箱" aria-label="邮箱" required />
+          <div id="hcaptcha-container" class="hcaptcha" data-sitekey="1ee07b2a-5c1a-41de-9a70-1436b6ee223c"></div>
+          <div class="captcha-tip">如果验证码未显示，请关闭广告拦截或稍后再试，可能需要多试几次。</div>
+          <button class="btn primary" type="submit">订阅</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© 2026 张永禄的博客 · 保留所有权利</div>
+    <div class="footer-links">
+      <a href="rss.xml">RSS</a>
+      <a href="mailto:hello@example.com">邮箱</a>
+      <a href="posts/index.html">文章</a>
+      <a href="#contact">联系</a>
+    </div>
+  </footer>
+
+  <div class="music-player">
+    <div class="disc-trigger" title="展开/收起播放器">
+      <span class="disc-art">💿</span>
+    </div>
+    <div class="player-controls">
+      <audio id="bgm"></audio>
+      <button id="prev-btn" class="music-btn" title="上一首">⏮</button>
+      <button id="music-toggle" class="music-btn" title="播放/暂停">▶</button>
+      <button id="next-btn" class="music-btn" title="下一首">⏭</button>
+      <select id="playlist-select" class="playlist-select" title="选择歌曲"></select>
+      <span class="time-display" id="time-display">0:00 / 0:00</span>
+      <input type="range" id="progress-bar" min="0" max="100" step="0.1" value="0" title="进度">
+      <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.3" title="音量调节">
+    </div>
+  </div>
+
+  <script src="https://js.hcaptcha.com/1/api.js?onload=hcaptchaOnload&render=explicit" async defer></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>

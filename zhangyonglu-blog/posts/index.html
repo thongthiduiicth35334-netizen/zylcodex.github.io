@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>文章列表 · 张永禄的博客</title>
+  <meta name="description" content="张永禄博客上所有文章的归档列表。" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <video class="bg-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?q=80&w=2560&auto=format&fit=crop">
+    <source src="../assets/space.mp4" type="video/mp4">
+    <source src="../assets/Space.Mp4.mp4" type="video/mp4">
+    <source src="../assets/space.mov" type="video/quicktime">
+  </video>
+  <header class="site-header">
+    <nav class="nav" aria-label="主导航">
+      <a href="../index.html" class="logo">张永禄的博客</a>
+      <div class="nav-links">
+        <a href="../index.html">首页</a>
+        <a href="index.html" aria-current="page">文章</a>
+        <a href="../index.html#topics">主题</a>
+        <a href="../index.html#contact">联系</a>
+      </div>
+      <div class="theme-controls">
+        <label class="theme-label" for="theme-select">风格</label>
+        <select class="theme-select" id="theme-select">
+          <option value="arcane">魔幻</option>
+          <option value="romantic">浪漫</option>
+          <option value="minimal">极简</option>
+        </select>
+        <label class="theme-label theme-minimal-label is-hidden" for="minimal-select">黑白</label>
+        <select class="theme-select is-hidden" id="minimal-select">
+          <option value="light">白</option>
+          <option value="dark">黑</option>
+        </select>
+      </div>
+      <button class="nav-toggle" aria-label="切换导航">☰</button>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <h1>文章列表</h1>
+    <p>内容整理中，已发布文章如下。</p>
+  </section>
+
+  <main class="post-list" id="main">
+    <article class="post-item">
+      <span class="tag">一点想法</span>
+      <h2><a href="一点想法.html">一些奇妙的想法</a></h2>
+      <p>好久没写东西了，熬夜写的，这篇还是太保守了，下次写的激进一些。</p>
+      <div class="meta">5 min · <time datetime="2026-02-03">2026-02-03</time></div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div>© 2026 张永禄的博客 · 保留所有权利</div>
+    <div class="footer-links">
+      <a href="../index.html">返回首页</a>
+    </div>
+  </footer>
+
+  <div class="music-player">
+    <div class="disc-trigger" title="展开/收起播放器">
+      <span class="disc-art">💿</span>
+    </div>
+    <div class="player-controls">
+      <audio id="bgm"></audio>
+      <button id="prev-btn" class="music-btn" title="上一首">⏮</button>
+      <button id="music-toggle" class="music-btn" title="播放/暂停">▶</button>
+      <button id="next-btn" class="music-btn" title="下一首">⏭</button>
+      <select id="playlist-select" class="playlist-select" title="选择歌曲"></select>
+      <span class="time-display" id="time-display">0:00 / 0:00</span>
+      <input type="range" id="progress-bar" min="0" max="100" step="0.1" value="0" title="进度">
+      <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.3" title="音量调节">
+    </div>
+  </div>
+
+  <script src="../assets/site.js"></script>
+</body>
+</html>
