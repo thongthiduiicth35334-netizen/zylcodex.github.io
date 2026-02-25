@@ -64,7 +64,7 @@
   applyMinimalMode(localStorage.getItem('minimalMode') || 'light');
 
   // Email copy
-  const emailText = 'thongthiduiicth35334@gmail.com';
+  const emailText = 'hello@zylcodex.tech';
   const emailCopy = document.querySelector('#email-copy');
   if (emailCopy) {
     const setCopyLabel = (text) => {
