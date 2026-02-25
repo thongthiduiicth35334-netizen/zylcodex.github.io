@@ -70,14 +70,14 @@
     const setCopyLabel = (text) => {
       emailCopy.textContent = text;
       setTimeout(() => {
-        emailCopy.textContent = 'Email: click to copy';
+        emailCopy.textContent = '邮箱：点击复制';
       }, 1500);
     };
 
     emailCopy.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(emailText);
-        setCopyLabel('Copied');
+        setCopyLabel('已复制');
       } catch (error) {
         const textarea = document.createElement('textarea');
         textarea.value = emailText;
@@ -85,7 +85,7 @@
         textarea.select();
         document.execCommand('copy');
         textarea.remove();
-        setCopyLabel('Copied');
+        setCopyLabel('已复制');
       }
     });
   }
@@ -101,11 +101,11 @@
       const token = hcaptchaResponse ? hcaptchaResponse.value.trim() : '';
 
       if (!email || !email.includes('@')) {
-        alert('Please enter a valid email.');
+        alert('请输入有效的邮箱地址。');
         return;
       }
       if (!token) {
-        alert('Please complete the captcha.');
+        alert('请完成验证码。');
         return;
       }
 
@@ -122,14 +122,14 @@
           : { ok: false, error: await response.text() };
 
         if (response.ok && result.ok) {
-          alert('Subscribed. Please check your email.');
+          alert('订阅成功，请查收邮件。');
           emailInput.value = '';
           if (window.hcaptcha) window.hcaptcha.reset();
         } else {
-          alert(`Subscribe failed: ${result.error || 'Please try again.'}`);
+          alert(`订阅失败：${result.error || '请稍后再试。'}`);
         }
       } catch (error) {
-        alert('Subscribe failed: network error.');
+        alert('订阅失败：网络错误。');
       }
     });
   }
@@ -209,14 +209,14 @@
 
     const playMusic = () => {
       bgm.play().then(() => {
-        musicBtn.textContent = 'Pause';
+        musicBtn.textContent = '⏸';
         if (musicPlayerContainer) {
           musicPlayerContainer.classList.add('playing');
           musicPlayerContainer.classList.add('expanded');
         }
         sessionStorage.setItem('bgm_playing', 'true');
       }).catch(() => {
-        musicBtn.textContent = 'Play';
+        musicBtn.textContent = '▶';
         if (musicPlayerContainer) musicPlayerContainer.classList.remove('playing');
         sessionStorage.setItem('bgm_playing', 'false');
       });
@@ -224,7 +224,7 @@
 
     const pauseMusic = () => {
       bgm.pause();
-      musicBtn.textContent = 'Play';
+      musicBtn.textContent = '▶';
       if (musicPlayerContainer) musicPlayerContainer.classList.remove('playing');
       sessionStorage.setItem('bgm_playing', 'false');
     };
@@ -302,10 +302,10 @@
       playMusic();
     } else if (shouldPlay === null) {
       bgm.play().then(() => {
-        musicBtn.textContent = 'Pause';
+        musicBtn.textContent = '⏸';
         sessionStorage.setItem('bgm_playing', 'true');
       }).catch(() => {
-        musicBtn.textContent = 'Play';
+        musicBtn.textContent = '▶';
         const unlockAudio = () => {
           if (bgm.paused) playMusic();
           document.removeEventListener('click', unlockAudio);
@@ -313,7 +313,7 @@
         document.addEventListener('click', unlockAudio);
       });
     } else {
-      musicBtn.textContent = 'Play';
+      musicBtn.textContent = '▶';
     }
   }
 })();
